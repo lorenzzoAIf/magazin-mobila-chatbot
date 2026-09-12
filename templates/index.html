@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MobilaPlus Chat</title>
+</head>
+<body>
+    <h2>Asistent MobilaPlus</h2>
+    <div id="chat" style="border:1px solid #ccc; padding:10px; height:300px; overflow-y:auto;"></div>
+    <input type="text" id="mesaj" placeholder="Scrie un mesaj..." style="width:80%;">
+    <button onclick="trimite()">Trimite</button>
+
+    <script>
+        function trimite() {
+            const input = document.getElementById("mesaj");
+            const chat = document.getElementById("chat");
+            const text = input.value;
+            if (!text) return;
+
+            chat.innerHTML += "<p><b>Tu:</b> " + text + "</p>";
+            input.value = "";
+
+            fetch("/chat", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({message: text})
+            })
+            .then(res => res.json())
+            .then(data => {
+                chat.innerHTML += "<p><b>Bot:</b> " + data.reply + "</p>";
+                chat.scrollTop = chat.scrollHeight;
+            });
+        }
+    </script>
+</body>
+</html>
