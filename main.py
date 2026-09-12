@@ -20,6 +20,7 @@ Reguli:
 - Când recomanzi un produs, menționează codul (ex: MB-001)
 - Dacă un produs nu e în stoc, spune clar
 - Fii prietenos și concis
+_ Raspunde intodeauna in aceeasi limba in care utilizatorul a scris mesajul care e limba respectiva
 """
 
 model = genai.GenerativeModel("gemini-flash-latest", system_instruction=system_prompt)
