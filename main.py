@@ -10,7 +10,7 @@ genai.configure(api_key=api_key)
 
 catalog_text = ""
 for produs in produse:
-    catalog_text += f"- Cod: {produs['cod']}, Nume: {produs['nume']}, Preț: {produs['pret']} MDL, Stoc: {produs['stoc']}, Categorie: {produs['categorie']}\n"
+    catalog_text += f"- Cod: {produs['cod']}, Nume: {produs['nume']}, Preț: {produs['pret']} USD, Stoc: {produs['stoc']}, Categorie: {produs['categorie']}\n"
 
 system_prompt = f"""Ești asistentul virtual al magazinului MobilaPlus & Construct.
 Vindem atât materiale de construcție, cât și mobilă.
