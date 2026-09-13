@@ -1,5 +1,5 @@
 # Materiale de construcție, organizate pe categorii
-# Fiecare categorie: (nume produs, preț MDL, stoc)
+# Fiecare categorie: (nume produs, preț USD, stoc)
 categorii_materiale = {
     "Ciment si mortar": [
         ("Ciment Portland M400 25kg", 7, 150),

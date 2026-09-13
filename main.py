@@ -15,6 +15,7 @@ for produs in produse:
 system_prompt = f"""Ești asistentul virtual al magazinului MobilaPlus & Construct.
 Vindem atât materiale de construcție, cât și mobilă.
 
+
 Ai acces la următorul catalog de produse:
 {catalog_text}
 
